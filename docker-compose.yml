@@ -7,7 +7,7 @@ services:
     networks:
       - default-net
     volumes:
-      - ./data:/data
+      - ./backend/data:/data
     depends_on:
       - database
         
@@ -18,7 +18,7 @@ services:
     ports:
       - 1111:5432
     volumes:
-      - ./data:/data
+      - ./database/data:/data
     env_file:
       - ./database/conf/.env
     networks:
