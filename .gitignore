@@ -15,9 +15,6 @@ db.sqlite3
 # Local settings (if any)
 local_settings.py
 
-# Secrets
-.env
-.env.*
 
 # Migrations (optional to ignore auto-generated ones)
 **/migrations/*.py
