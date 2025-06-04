@@ -1,0 +1,49 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django SQLite DB (if used)
+db.sqlite3
+*.sqlite3
+
+# Local settings (if any)
+local_settings.py
+
+# Secrets
+.env
+.env.*
+
+# Migrations (optional to ignore auto-generated ones)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Media/uploads (if not versioning user uploads)
+media/
+uploads/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs & Editors
+.vscode/
+.idea/
+
+# Coverage & testing
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Static build artifacts (if built locally)
+staticfiles/
+static/
