@@ -1,0 +1,38 @@
+services:
+  backend:
+    container_name: backend
+    build: ./backend
+    ports:
+      - 8000:8000
+    networks:
+      - default-net
+    volumes:
+      - ./data:/data
+    depends_on:
+      - database
+        
+  
+  database:
+    container_name: postgres
+    build: ./database
+    ports:
+      - 1111:5432
+    volumes:
+      - ./data:/data
+    env_file:
+      - ./database/conf/.env
+    networks:
+      - default-net
+    command: >
+      postgres
+      -c wal_level=replica
+      -c max_wal_senders=10
+      -c wal_keep_size=64
+      -c archive_mode=on
+    
+networks:
+  default-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.198.128.0/24
