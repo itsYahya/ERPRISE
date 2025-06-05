@@ -44,3 +44,6 @@ coverage.xml
 # Static build artifacts (if built locally)
 staticfiles/
 static/
+
+# Ignoring postgres_data volume 
+postgres_data
