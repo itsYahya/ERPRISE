@@ -16,9 +16,10 @@ services:
     container_name: postgres
     build: ./database
     ports:
-      - 1111:5432
+      - 5432:5432
     volumes:
       - ./database/data:/data
+      - ./database/postgres_data:/var/lib/postgresql/data
     env_file:
       - ./database/conf/.env
     networks:
