@@ -47,3 +47,5 @@ static/
 
 # Ignoring postgres_data volume 
 postgres_data
+
+data
