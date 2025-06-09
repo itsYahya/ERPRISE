@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'authentication',
     'humanResources',
+    'crm',
+    'products',
 ]
 
 MIDDLEWARE = [
