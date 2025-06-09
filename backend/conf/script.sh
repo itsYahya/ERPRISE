@@ -1,8 +1,16 @@
 #! /bin/bash
 
-chmod +x wait-for-it.sh
+apt update && apt install netcat-openbsd
 
-./wait-for-it.sh postgres:5432 -- python api/manage.py makemigrations
-./wait-for-it.sh postgres:5432 -- python api/manage.py migrate
+# Wait until port 5432 is open
+until nc -z postgres 5432; do
+  echo "Waiting for PostgreSQL at postgres:5432..."
+  sleep 5
+done
 
-./wait-for-it.sh postgres:5432 -- python api/manage.py runserver 0.0.0.0:8000
+echo "PostgreSQL is ready to go!..."
+
+python api/manage.py makemigrations
+python api/manage.py migrate
+
+python api/manage.py runserver 0.0.0.0:8000
