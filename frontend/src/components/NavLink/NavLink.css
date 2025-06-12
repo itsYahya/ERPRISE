@@ -1,0 +1,51 @@
+li .nav-tab {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+li .nav-tab *{
+    font-weight: 500;
+    color:#5e6e82;
+}
+li .dropdown-list *{
+    font-weight: 500;
+    font-size: 14px;
+    color: #5e6e82;
+}
+.nav-tab .nav-icon {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-tab .nav-title {
+    font-size: 14px;
+    width: 180px;
+    color: #5e6e82;
+}
+
+.nav-tab .nav-dropdown {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+li .dropdown-list {
+    display: none;
+    flex-direction: column;
+    padding: 5px 40px;
+}
+.dropdown-list li {
+    margin-bottom: 5px;
+}
+a {
+    text-decoration: none;
+    font-size: 13px;
+}
+.show {
+    display: flex !important;
+}

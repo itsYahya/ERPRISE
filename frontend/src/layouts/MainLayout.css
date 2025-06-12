@@ -1,0 +1,16 @@
+.layout-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.layout-main {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+}
+.layout-content {
+    width: 100%;
+    margin-top: 4rem;
+    padding: 10px;
+}
