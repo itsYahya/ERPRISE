@@ -1,0 +1,328 @@
+:root, [data-bs-theme=light] {
+    --erprise-blue: #1A4E9C;/**/
+    --erprise-indigo: #444DAB;/**/
+    --erprise-purple: #483F7E;/**/
+    --erprise-pink: #A23E66;/**/
+    --erprise-red: #992238;/**/
+    --erprise-orange: #A14806;/**/
+    --erprise-yellow: #9D471B;/**/
+    --erprise-green: #00734B;/**/
+    --erprise-teal: #04545B;/**/
+    --erprise-cyan: #1A6FAF;/**/
+    --erprise-black: #000;/**/
+    --erprise-white: #fff;/**/
+    --erprise-gray: #4A5563;/**/
+    --erprise-gray-dark: #313942;/**/
+    --erprise-gray-100: #D9DEE4;/**/
+    --erprise-gray-200: #BCC6D3;/**/
+    --erprise-gray-300: #9AA8BE;/**/
+    --erprise-gray-400: #7D8799;/**/
+    --erprise-gray-500: #646F82;/**/
+    --erprise-gray-600: #4A5563;/**/
+    --erprise-gray-700: #3B4959;/**/
+    --erprise-gray-800: #313942;/**/
+    --erprise-gray-900: #212B37;/**/
+    --erprise-gray-1000: #161F2A;/**/
+    --erprise-gray-1100: #050C17;/**/
+    --erprise-primary: #1A4E9C;/**/
+    --erprise-secondary: #4A5563;/**/
+    --erprise-success: #00734B;/**/
+    --erprise-info: #1A6FAF;/**/
+    --erprise-warning: #9D471B;/**/
+    --erprise-danger: #992238;/**/
+    --erprise-light: #D9DEE4;/**/
+    --erprise-dark: #050C17;/**/
+    --erprise-primary-rgb: 26, 75, 153;/**/
+    --erprise-secondary-rgb: 74, 82, 94;/**/
+    --erprise-success-rgb: 0, 126, 74;/**/
+    --erprise-info-rgb: 26, 111, 175;/**/
+    --erprise-warning-rgb: 147, 77, 37;/**/
+    --erprise-danger-rgb: 138, 33, 44;/**/
+    --erprise-light-rgb: 217, 222, 228;/**/
+    --erprise-dark-rgb: 5, 12, 23;/**/
+    --erprise-primary-text-emphasis: #14396B;/**/
+    --erprise-secondary-text-emphasis: #3C424C;/**/
+    --erprise-success-text-emphasis: #00522F;/**/
+    --erprise-info-text-emphasis: #0F4964;/**/
+    --erprise-warning-text-emphasis: #6A381B;/**/
+    --erprise-danger-text-emphasis: #6E1A28;/**/
+    --erprise-light-text-emphasis: #3C3C3D;/**/
+    --erprise-dark-text-emphasis: #585C61;/**/
+    --erprise-primary-bg-subtle: #9099A5;/**/
+    --erprise-secondary-bg-subtle: #A8ABB0;/**/
+    --erprise-success-bg-subtle: #81B49D;/**/
+    --erprise-info-bg-subtle: #81AAB4;/**/
+    --erprise-warning-bg-subtle: #B48C78;/**/
+    --erprise-danger-bg-subtle: #AE838D;/**/
+    --erprise-light-bg-subtle: #C8CCCC;/**/
+    --erprise-dark-bg-subtle: #03070C;/**/
+    --erprise-primary-border-subtle: #6582A0;/**/
+    --erprise-secondary-border-subtle: #7A7F84;/**/
+    --erprise-success-border-subtle: #57987A;/**/
+    --erprise-info-border-subtle: #5C94A8;/**/
+    --erprise-warning-border-subtle: #A27B69;/**/
+    --erprise-danger-border-subtle: #985E67;/**/
+    --erprise-light-border-subtle: #BCC6D3;/**/
+    --erprise-dark-border-subtle: #646F82;/**/
+    --erprise-white-rgb: 255, 255, 255;/**/
+    --erprise-black-rgb: 0, 0, 0;/**/
+    --erprise-font-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";/**/
+    --erprise-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;/**/
+    --erprise-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));/**/
+    --erprise-body-font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";/**/
+    --erprise-body-font-size: 1rem;/**/
+    --erprise-body-font-weight: 400;/**/
+    --erprise-body-line-height: 1.5;/**/
+    --erprise-body-color: #3B4959;/**/
+    --erprise-body-color-rgb: 55, 64, 76;/**/
+    --erprise-body-bg: #BCC6D3;/**/
+    --erprise-body-bg-rgb: 144, 153, 165;/**/
+    --erprise-emphasis-color: #000;/**/
+    --erprise-emphasis-color-rgb: 0, 0, 0;/**/
+    --erprise-secondary-color: #212B37;/**/
+    --erprise-secondary-color-rgb: 35, 43, 54;/**/
+    --erprise-secondary-bg: #9AA8BE;/**/
+    --erprise-secondary-bg-rgb: 129, 138, 152;/**/
+    --erprise-tertiary-color: #4A5563;/**/
+    --erprise-tertiary-color-rgb: 74, 82, 94;/**/
+    --erprise-tertiary-bg: #D9DEE4;/**/
+    --erprise-tertiary-bg-rgb: 217, 222, 228;/**/
+    --erprise-heading-color: var(--erprise-secondary-color);/**/
+    --erprise-link-color: #1A4E9C;/**/
+    --erprise-link-color-rgb: 26, 75, 153;/**/
+    --erprise-link-decoration: none;/**/
+    --erprise-link-hover-color: #174676;/**/
+    --erprise-link-hover-color-rgb: 22, 61, 114;/**/
+    --erprise-link-hover-decoration: underline;/**/
+    --erprise-code-color: #A23E66;/**/
+    --erprise-highlight-color: #3B4959;/**/
+    --erprise-highlight-bg: #B48C78;/**/
+    --erprise-border-width: 1px;/**/
+    --erprise-border-style: solid;/**/
+    --erprise-border-color: #9AA8BE;/**/
+    --erprise-border-color-translucent: rgba(0, 0, 0, 0.175);/**/
+    --erprise-border-radius: 0.25rem;/**/
+    --erprise-border-radius-sm: 0.25rem;/**/
+    --erprise-border-radius-lg: 0.375rem;/**/
+    --erprise-border-radius-xl: 1rem;/**/
+    --erprise-border-radius-xxl: 2rem;/**/
+    --erprise-border-radius-2xl: var(--erprise-border-radius-xxl);/**/
+    --erprise-border-radius-pill: 50rem;/**/
+    --erprise-box-shadow: 0 7px 14px 0 rgba(40, 43, 55, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);/**/
+    --erprise-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);/**/
+    --erprise-box-shadow-lg: 0 1rem 4rem rgba(0, 0, 0, 0.175);/**/
+    --erprise-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);/**/
+    --erprise-focus-ring-width: 0.25rem;/**/
+    --erprise-focus-ring-opacity: 0.25;/**/
+    --erprise-focus-ring-color: rgba(29, 78, 184, 0.25);/**/
+    --erprise-form-valid-color: #00734B;/**/
+    --erprise-form-valid-border-color: #00734B;/**/
+    --erprise-form-invalid-color: #992238;/**/
+    --erprise-form-invalid-border-color: #992238;/**/
+}
+
+:root, [data-bs-theme=light] {
+    --erprise-facebook: #3c5a99;
+    --erprise-google-plus: #dd4b39;
+    --erprise-twitter: #1da1f2;
+    --erprise-linkedin: #0077b5;
+    --erprise-youtube: #ff0001;
+    --erprise-github: #333333;
+    --erprise-gray-100-rgb: 217, 222, 228;/**/
+    --erprise-gray-200-rgb: 237, 242, 249;
+    --erprise-gray-300-rgb: 129, 138, 152;/**/
+    --erprise-gray-400-rgb: 182, 193, 210;
+    --erprise-gray-500-rgb: 157, 169, 187;
+    --erprise-gray-600-rgb: 74, 82, 94;/**/
+    --erprise-gray-700-rgb: 55, 64, 76;/**/
+    --erprise-gray-800-rgb: 77, 89, 105;
+    --erprise-gray-900-rgb: 35, 43, 54;/**/
+    --erprise-gray-1000-rgb: 35, 46, 60;
+    --erprise-gray-1100-rgb: 5, 12, 23;/**/
+    --erprise-facebook-rgb: 60, 90, 153;
+    --erprise-google-plus-rgb: 221, 75, 57;
+    --erprise-twitter-rgb: 29, 161, 242;
+    --erprise-linkedin-rgb: 0, 119, 181;
+    --erprise-youtube-rgb: 255, 0, 1;
+    --erprise-github-rgb: 51, 51, 51;
+    --erprise-gray-link-hover-100: RGBA(250, 251, 253, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-200: RGBA(241, 245, 250, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-300: RGBA(224, 232, 242, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-400: RGBA(197, 205, 219, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-500: RGBA(126, 135, 150, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-600: RGBA(93, 103, 118, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-700: RGBA(75, 88, 104, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-800: RGBA(62, 71, 84, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-900: RGBA(42, 51, 64, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-1000: RGBA(28, 37, 48, var(--erprise-link-opacity, 1)) !important;
+    --erprise-gray-link-hover-1100: RGBA(9, 18, 31, var(--erprise-link-opacity, 1)) !important;
+    --em-rgb-background: var(--erprise-tertiary-bg);/**/
+    --erprise-quaternary-bg: #fff;/**/
+    --erprise-quaternary-bg-rgb: 255, 255, 255;/**/
+    --erprise-emphasis-bg: #fff;/**/
+    --erprise-emphasis-bg-rgb: 255, 255, 255;/**/
+    --erprise-blockquote-footer-color: #4A5563;/**/
+    --erprise-hr-opacity: 1;/**/
+    --erprise-mark-bg: #fcf8e3;
+    --erprise-font-base: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";/**/
+    --erprise-btn-disabled-border-color: transparent;/**/
+    --erprise-btn-reveal-color: #4A5563;/**/
+    --erprise-btn-reveal-hover-color: #3B4959;/**/
+    --erprise-btn-reveal-focus-bg: #e6e6e6;
+    --erprise-btn-reveal-hover-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1),
+    0 2px 5px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba(0, 0, 0, 0.07),
+    0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    --erprise-btn-reveal-focus-border-color: #dfdfdf;
+    --erprise-btn-erprise-background: var(--erprise-quaternary-bg);/**/
+    --erprise-btn-disabled-color: #313942;/**/
+    --erprise-btn-erprise-box-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1), 0 2px 5px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    --erprise-btn-erprise-hover-box-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1), 0 2px 5px 0 rgba(43, 45, 80, 0.1), 0 3px 9px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    --erprise-btn-erprise-default-color: var(--erprise-gray-800);/**/
+    --erprise-btn-erprise-default-hover-color: #404a57;
+    --erprise-btn-erprise-default-active-background: #e6e6e6;
+    --erprise-btn-erprise-default-active-border: #404a57;
+    --erprise-btn-active-border-color: transparent;/**/
+    --erprise-btn-erprise-primary-color: var(--erprise-primary);/**/
+    --erprise-btn-erprise-primary-hover-color: #1F4E79;/**/
+    --erprise-btn-erprise-primary-active-background: #d5e5fa;
+    --erprise-btn-erprise-primary-active-color: #1F4E79;/**/
+    --erprise-btn-erprise-secondary-color: var(--erprise-secondary);/**/
+    --erprise-btn-erprise-secondary-hover-color: #424A58;/**/
+    --erprise-btn-erprise-secondary-active-background: #e3e6ea;
+    --erprise-btn-erprise-secondary-active-color: #424A58;/**/
+    --erprise-btn-erprise-success-color: var(--erprise-success);/**/
+    --erprise-btn-erprise-success-hover-color: #007A44;/**/
+    --erprise-btn-erprise-success-active-background: #ccf6e4;
+    --erprise-btn-erprise-success-active-color: #007A44;/**/
+    --erprise-btn-erprise-info-color: var(--erprise-info);/**/
+    --erprise-btn-erprise-info-hover-color: #145A85;/**/
+    --erprise-btn-erprise-info-active-background: #d4f2ff;
+    --erprise-btn-erprise-info-active-color: #145A85;/**/
+    --erprise-btn-erprise-warning-color: var(--erprise-warning);/**/
+    --erprise-btn-erprise-warning-hover-color: #7A3E1A;/**/
+    --erprise-btn-erprise-warning-active-background: #B48C78;/**/
+    --erprise-btn-erprise-warning-active-color: #7A3E1A;/**/
+    --erprise-btn-erprise-danger-color: var(--erprise-danger);/**/
+    --erprise-btn-erprise-danger-hover-color: #7A1B2C;/**/
+    --erprise-btn-erprise-danger-active-background: #fad7dd;
+    --erprise-btn-erprise-danger-active-color: #7A1B2C;/**/
+    --erprise-btn-erprise-light-color: var(--erprise-light);/**/
+    --erprise-btn-erprise-light-hover-color: #8B8D91;/**/
+    --erprise-btn-erprise-light-active-background: #fefeff;
+    --erprise-btn-erprise-light-active-color: #8B8D91;/**/
+    --erprise-btn-erprise-dark-color: var(--erprise-dark);/**/
+    --erprise-btn-erprise-dark-hover-color: #223047;/**/
+    --erprise-btn-erprise-dark-active-background: #ced1d4;
+    --erprise-btn-erprise-dark-active-color: #223047;/**/
+    --erprise-input-btn-focus-color: rgba(29, 78, 184, 0.25);/**/
+    --erprise-btn-link-color: var(--erprise-link-color);/**/
+    --erprise-btn-link-hover-color: #174676;/**/
+    --erprise-btn-disabled-color: #4A5563;/**/
+    --erprise-input-focus-border-color-global: #96bdf2;
+    --erprise-input-placeholder-color-global: var(--erprise-gray-400);/**/
+    --erprise-bg-navbar-glass: rgba(237, 242, 249, 0.96);
+    --erprise-navbar-vertical-default-bg-color: var(--erprise-bg-navbar-glass);/**/
+    --erprise-navbar-vertical-default-link-color: #3B4959;/**/
+    --erprise-navbar-vertical-default-link-hover-color: #161F2A;/**/
+    --erprise-navbar-vertical-default-link-active-color: #1A4E9C;/**/
+    --erprise-navbar-vertical-default-link-disable-color: #7D8799;/**/
+    --erprise-navbar-vertical-default-hr-color: rgba(0, 0, 0, 0.08);/**/
+    --erprise-navbar-vertical-default-scrollbar-color: rgba(74, 82, 94, 0.3);/**/
+    --erprise-navbar-vertical-default-label-color: var(--erprise-gray-500);/**/
+    --erprise-navbar-vertical-inverted-bg-color: #161F2A;/**/
+    --erprise-navbar-vertical-inverted-link-color: #646F82;/**/
+    --erprise-navbar-vertical-inverted-link-hover-color: #BCC6D3;/**/
+    --erprise-navbar-vertical-inverted-link-active-color: #BCC6D3;/**/
+    --erprise-navbar-vertical-inverted-link-disable-color: #3B4959;/**/
+    --erprise-navbar-vertical-inverted-hr-color: rgba(255, 255, 255, 0.08);/**/
+    --erprise-navbar-vertical-inverted-scrollbar-color: #7D8799;/**/
+    --erprise-navbar-vertical-inverted-label-color: #3B4959;/**/
+    --erprise-navbar-vertical-vibrant-bg-image: linear-gradient(-45deg, rgba(0, 160, 255, 0.86), #0048a2), url(../img/generic/bg-navbar.png);
+    --erprise-navbar-vertical-vibrant-link-color: rgba(255, 255, 255, 0.75);/**/
+    --erprise-navbar-vertical-vibrant-link-hover-color: #fff;/**/
+    --erprise-navbar-vertical-vibrant-link-active-color: #fff;/**/
+    --erprise-navbar-vertical-vibrant-link-disable-color: rgba(255, 255, 255, 0.45);/**/
+    --erprise-navbar-vertical-vibrant-hr-color: rgba(255, 255, 255, 0.2);/**/
+    --erprise-navbar-vertical-vibrant-scrollbar-color: #7D8799;/**/
+    --erprise-navbar-vertical-vibrant-label-color: rgba(255, 255, 255, 0.4);/**/
+    --erprise-navbar-vertical-card-bg-color: #fff;/**/
+    --erprise-navbar-vertical-card-link-color: var(--erprise-gray-700);/**/
+    --erprise-navbar-vertical-card-link-hover-color: var(--erprise-gray-900);/**/
+    --erprise-navbar-vertical-card-link-active-color: var(--erprise-primary);/**/
+    --erprise-navbar-vertical-card-link-disable-color: var(--erprise-gray-400);/**/
+    --erprise-navbar-vertical-card-hr-color: rgba(0, 0, 0, 0.08);/**/
+    --erprise-navbar-vertical-card-scrollbar-color: rgba(74, 82, 94, 0.3);/**/
+    --erprise-navbar-vertical-card-label-color: var(--erprise-gray-500);/**/
+    --erprise-avatar-status-border-color: var(--erprise-quaternary-bg);/**/
+    --erprise-avatar-name-bg: #212B37;/**/
+    --erprise-avatar-button-bg: var(--erprise-gray-400);/**/
+    --erprise-avatar-button-hover-bg: var(--erprise-gray-500);/**/
+    --erprise-notification-bg: var(--erprise-emphasis-bg);/**/
+    --erprise-notification-title-bg: #D9DEE4;/**/
+    --erprise-notification-unread-bg: var(--erprise-gray-200);/**/
+    --erprise-notification-unread-hover-bg: #dae4f3;
+    --erprise-notification-indicator-border-color: var(--erprise-body-bg);/**/
+    --erprise-kanban-bg: #D9DEE4;/**/
+    --erprise-kanban-header-bg: var(--erprise-kanban-bg);/**/
+    --erprise-kanban-item-bg: #fff;/**/
+    --erprise-kanban-item-color: var(--erprise-gray-900);/**/
+    --erprise-kanban-btn-add-hover-bg: var(--erprise-gray-200);/**/
+    --erprise-kanban-draggable-source-dragging-bg: var(--erprise-body-bg);/**/
+    --erprise-kanban-bg-attachment-bg: var(--erprise-gray-300);/**/
+    --erprise-kanban-footer-color: var(--erprise-gray-600);/**/
+    --erprise-kanban-nav-link-card-details-color: var(--erprise-gray-700);/**/
+    --erprise-kanban-nav-link-card-details-hover-bg: #BCC6D3;/**/
+    --erprise-bg-shape-bg: #4695ff;
+    --erprise-bg-shape-bg-ltd: linear-gradient(-45deg, #4695ff, #1970e2);
+    --erprise-bg-shape-bg-dtl: linear-gradient(-45deg, #1970e2, #4695ff);
+    --erprise-line-chart-gradient: linear-gradient(-45deg, #014ba7, #0183d0);
+    --erprise-card-gradient: linear-gradient(-45deg, #1970e2, #4695ff);
+    --erprise-progress-gradient: linear-gradient(-45deg, #1970e2, #4695ff);
+    --erprise-bg-circle-shape: none;
+    --erprise-bg-circle-shape-bg: #4695ff;
+    --erprise-modal-shape-header: linear-gradient(-45deg, #1970e2, #4695ff);
+    --erprise-modal-shape-header-bg: #4494ff;
+    --fc-button-bg-color: #212B37;/**/
+    --fc-button-border-color: #212B37;/**/
+    --fc-button-hover-bg-color: #050C17;/**/
+    --fc-button-hover-border-color: #050C17;/**/
+    --fc-button-active-bg-color: #050C17;/**/
+    --fc-button-active-border-color: #050C17;/**/
+    --fc-button-list-day-cushion: var(--erprise-quaternary-bg);/**/
+    --fc-highlight-color: rgba(var(--erprise-primary-rgb), 0.1);/**/
+    --erprise-flatpickr-calendar-bg: var(--erprise-quaternary-bg);/**/
+    --erprise-leaflet-bar-bg: #fff;/**/
+    --erprise-leaflet-popup-content-wrapper-bg: var(--erprise-quaternary-bg);/**/
+    --erprise-choices-item-selectable-highlighted-bg: #fff;/**/
+    --erprise-choices-item-has-no-choices-bg: var(--erprise-quaternary-bg);/**/
+    --erprise-bg-choices-close-button: #BCC6D3;/**/
+    --erprise-thumbnail-bg-global: #fff;/**/
+    --erprise-thumbnail-bg-global: #fff;/**/
+    --erprise-chat-contact-bg: var(--erprise-emphasis-bg);/**/
+    --erprise-tinymce-bg: var(--erprise-quaternary-bg);/**/
+    --erprise-slick-arrow-bg: rgba(255, 255, 255, 0.8);/**/
+    --erprise-react-datepicker-bg: #fff;/**/
+    --erprise-react-datepicker-header-bg: #BCC6D3;/**/
+    --erprise-star-rating-bg-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFdElEQVR4nO2aXWxURRTH/2dut58Imho1SgStuit+vBo0BkgkRjDog+VBiJEXqJhKK21x+7EdUu5u2W1Uqi8Qo4YQY6gQDQlRn9RENGoMD0a7RCzGRCJGBLRF9mOOD+waKHe7e2f23mt0f4/zceY/Z2fmzJm7QI0aNWr8j6EgBu3sHG9oXHC2gxQvJ/CUhbpUPD5wMggtwv8hmZrmn3mHmF8G4XEm6s5R/kinlPP91xKAA7YN2A8CeHRW8eLmrOjwWwsQgAMYqs+xnLGls3O8wW89vjqgp1/eDWC1YyXhxqYFvz/ppx7AZwcIsnrmbMDUK6X0V5NfA/VJuRDgdWWa3Tmds1b5IqiAf97OUReAunLNCOx4RniFL/eALimvrs+KnwDMq6yHWJq0Bz/3VFRxJD8GabgY4iqcPABWvd6puRzPV4CUsnEmK6YA3OCiG1tKRRIJecwrXUU8XwHTGbEe7iYPAJQXYqsXeq4YyEvjUkoxkxXfAbhDo/uFOrYWxeMDv1Rb16V4ugJmctYa6E0eABpyItdZTT1OeLwFDEMa02YpZeWHpwaeOaBncOQhMJYamrnmvMdJUtXOgI0bd4daW0+25S0rAoV7iLiHgWqkuDkChjik9ibl8EmAuAo2/8G1A7ZKea24IMJkcQRAmJkiBIQBtAGwqiluNgScU4w0EU2CkWZSk8ycnleP76WUf2nadCYajbfmrfwDxIWJgiMAhQG06k7AQxSAEwAmiTnNRJMEMWkxpePx/lNzrRpHB7wwOLJcMR+Cm9vbv5cZAK81h1S3lFLNrnQ8BBVjF/4bkweAZgDPnc+IJ5wqS0QBDnsoKBAYdLtTubMDCF95qiYAhMUfOpY7FSqlOgCc9lSRjzDR86MjsS+d6hwdMBaX3zCrlQDOeKrMBwiIpnYMvVSqvuRNMBWXXwPiYQB/eKLMBxgY3mnHRudqM+dVOGkPfsEKjwCYrqoyHyAgnrKHRipoV57CveAwgCZjZT7AwFjKHuqr5Npc8VW4r3/7ShAdAuD7xwuXjCftoa5KcwZXuUDv4MgqYn4XQEhLmscw8+5UPPaMm4TJVTqc2jF0GERrAeRcq/MceqOlnje7zRa10uHege3tBHobgXxdvhIm7DuRjjw9MbE277av1gRS9vAEwE8BqGpurgVhf0ud2qAz+YvdDegb3L4BTK+b2DCBgffO/np9+549m7K6NoweMD795KOj9y9bcRsB95rY0SRTp+qW7drV/aeJEeM9TMzvm9rQg48mEv2/mVoxP8RYLDa2oYWor4oVYwuEu6qgQwOOtLfvN36DrEIY4yXmNrRobGv79hZTI0YOKPwCEVMRurBFxqvPyAGLw+lbEWBuoBCwAwhB7f/i+GS8/YwcwBzY/i8S7AoILgIUMY8EZluAzZegIY2Fc0gbbQdc9DwHFgGKCFZGP4K2AwoxuFGz+xkCehFSNxHzKoCO6uowjQRl/7dXCs0YnCXmVwWH7Evu8T9LKT+Yzoj1BNggLHRl0fAc0ncAiyVuHl8INKEI0aQdOz67rvDRcm9394sToabpLhBHAVxVkV02c4D2e0DfwMi+Cv76CoCPKEU9Y4nYZ5Xa7pHyOpEVwwA2oXzKfmHqWKRF90FEewVUkAMcZ/C2lB076PadbkzKUwCejUblK3kSO0FYM0fzhkXh9M0AptyMUcQkDJY6AE8D2NIcUktS9vABk7+0JBJyMhmPPcYKywEu9cGWQ3nrnO4Y2g5gYN+sogyIU5mQakvasXEpZUbX9mxSidjHzSG+jxjrAPx4eS29afIwor0FWkJq9HzOOsvMq5n5B0vx2OioPKFrrxyFg/ItKeXBmazoAGMFQEea6/MlP3zWqFGjRo0y/A3lxcMNXfCjjAAAAABJRU5ErkJggg==");
+    --erprise-theme-wizard-nav-item-circle-bg: var(--erprise-quaternary-bg);/**/
+    --erprise-toast-bg-global: rgba(255, 255, 255, 0.85);/**/
+    --erprise-toast-header-bg-global: rgba(255, 255, 255, 0.85);/**/
+    --erprise-card-span-img-bg: var(--erprise-quaternary-bg);/**/
+    --erprise-card-span-img-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);/**/
+    --erprise-card-span-img-hover-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.175);/**/
+    --erprise-setting-toggle-shadow: 0 -7px 14px 0 rgba(40, 43, 55, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);/**/
+    --erprise-scrollbar-bg: rgba(182, 193, 210, 0.55);
+    --erprise-simplebar-bg: #7D8799;/**/
+    --erprise-nav-pills-erprise-active-bg-color: var(--erprise-quaternary-bg);/**/
+    --erprise-btn-disabled-custom-background: rgba(217, 222, 228, 0.55);/**/
+    --erprise-btn-disabled-custom-color: rgba(5, 12, 23, 0.3);/**/
+    --erprise-dropdown-bg-global: #fff;/**/
+    --erprise-dropdown-link-hover-color-global: #2a3441;
+    --erprise-dropdown-link-hover-bg-global: #D9DEE4;/**/
+    --erprise-popover-header-bg-global: #D9DEE4;/**/
+    --erprise-toast-bg-global: rgba(255, 255, 255, 0.85);/**/
+    --erprise-toast-header-bg-global: rgba(255, 255, 255, 0.85);/**/
+    --erprise-list-group-bg-global: var(--erprise-emphasis-bg);/**/
+    --erprise-accordion-btn-color-global: #3B4959;/**/
+    --erprise-alert-link-color: #1A4E9C;/**/
+}
