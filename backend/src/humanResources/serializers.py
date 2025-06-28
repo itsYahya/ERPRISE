@@ -23,7 +23,7 @@ class EmployeeSerializer(serializers.ModelSerializer):
     department = DepartmentSerializer(read_only=True)
     job = JobSerializer(read_only=True)
     salaries = SalarySerializer(many=True, read_only=True)
-
+    photo = serializers.ImageField(use_url=True, required=False)
     class Meta:
         model = Employee
         fields = '__all__'

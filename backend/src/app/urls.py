@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from authentication.views import CustomTokenObtainPairView
 from authentication.views import RegisterUserView
 from drf_spectacular.views import (
@@ -28,7 +30,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('core.urls')),
     path('humanRS/', include('humanResources.urls')),
-
+    path('api/roles/', include('rolesPermissions.urls')),
+    path('api/user-permissions/', include('userPermissions.urls')),
+    path('api/users/', include('profile.urls')),
+    path('api/user-logs/', include('logs.urls')),
+    path('api/attendance/', include('attendance.urls')),
     path('clients/', include('crm.urls')),
     path('products/', include('products.urls')),
 
@@ -45,3 +51,6 @@ urlpatterns = [
 
     path('api/register/', RegisterUserView.as_view(), name='register'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

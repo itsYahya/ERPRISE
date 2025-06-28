@@ -21,6 +21,7 @@ class Employee(models.Model):
     job = models.ForeignKey(Job, on_delete=models.SET_NULL, null=True)  # changed from job_title
     status = models.CharField(max_length=20, default='Active')  # Active, On Leave, Resigned
     manager = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
+    photo = models.ImageField(upload_to='employee_photos/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -1,9 +1,11 @@
 .sidebar-container {
     width: max-content;
+    min-height: 100vh;
     max-height: 100vh;
     position: fixed;
     z-index: 11111111;
     padding-left: 40px;
+    background-color: #edf2f9;
 }
 .nav-header {
     display: flex;

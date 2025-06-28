@@ -8,7 +8,9 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class InventorySerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)
-
+    product_id = serializers.PrimaryKeyRelatedField(
+        queryset=Product.objects.all(), source='product', write_only=True
+    )
     class Meta:
         model = Inventory
         fields = '__all__'

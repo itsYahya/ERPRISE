@@ -7,28 +7,16 @@ import { FaUserTie } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa6";
 import { FaBox } from "react-icons/fa6";
 import { FaGear } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const menuItems = [
     {
-        label: 'Dashboard',
+        label: 'Overview',
         icon: <FaChartPie />,
         submenus: [
-            { label: 'Overview', path: '/dashboard/overview' },
-            { label: 'Sales Analytics', path: '/dashboard/sales' },
-            { label: 'Revenue Report', path: '/dashboard/revenue' },
-            { label: 'Activity Timeline', path: '/dashboard/activity' },
-            { label: 'Notifications', path: '/dashboard/notifications' }
-        ]
-    },
-    {
-        label: 'User Management',
-        icon: <FaUserGear />,
-        submenus: [
-            { label: 'All Users', path: '/users' },
-            { label: 'Add New User', path: '/users/add' },
-            { label: 'Roles & Permissions', path: '/users/permissions' },
-            { label: 'User Activity Logs', path: '/users/activity' },
-            { label: 'Account Status', path: '/users/status' }
+            { label: 'Dashboard', path: '/overview/dashboard' },
+            { label: 'Departments', path: '/overview/departments' },
+            { label: 'Jobs', path: '/overview/jobs' },
         ]
     },
     {
@@ -38,7 +26,6 @@ const menuItems = [
             { label: 'Employee Directory', path: '/employees' },
             { label: 'Add New Employee', path: '/employees/add' },
             { label: 'Attendance Tracker', path: '/employees/attendance' },
-            { label: 'Leave Management', path: '/employees/leave' },
             { label: 'Payroll', path: '/employees/payroll' }
         ]
     },
@@ -47,10 +34,7 @@ const menuItems = [
         icon: < FaUser />,
         submenus: [
             { label: 'All Customers', path: '/customers' },
-            { label: 'Add New Customer', path: '/customers/add' },
-            { label: 'Leads & Opportunities', path: '/customers/opportunities' },
-            { label: 'Customer Feedback', path: '/customers/feedback' },
-            { label: 'Support Tickets', path: '/customers/tickets' }
+            { label: 'Customer Contacts', path: '/customers/contacts' }
         ]
     },
     {
@@ -58,10 +42,8 @@ const menuItems = [
         icon: < FaBox />,
         submenus: [
             { label: 'Product List', path: '/products' },
-            { label: 'Add New Product', path: '/products/add' },
             { label: 'Inventory Control', path: '/products/inventory' },
-            { label: 'Categories', path: '/products/categories' },
-            { label: 'Suppliers', path: '/products/suppliers' }
+            { label: 'Orders', path: '/products/orders' },
         ]
     },
     {
@@ -70,22 +52,28 @@ const menuItems = [
         submenus: [
             { label: 'General Settings', path: '/settings/general' },
             { label: 'Profile Settings', path: '/settings/profile' },
-            { label: 'Security & Privacy', path: '/settings/security' },
-            { label: 'Notification Preferences', path: '/settings/notification' },
-            { label: 'System Logs', path: '/settings/logs' }
         ]
     }
 ];
 
 function Sidebar() {
     const [isCollapsed, setIsCollapsed] = useState(false);
-
     const toggleCollapse = () => setIsCollapsed(!isCollapsed);
+    const navigate = useNavigate();
 
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userName = user?.username || user?.email || 'Utilisateur';
+
+    const handleLogout = () => {
+        localStorage.removeItem('access');
+        localStorage.removeItem('refresh');
+        localStorage.removeItem('user');
+        navigate('/login');
+    };
     return (
         <nav className='sidebar-container'>
             <div className="nav-header">
-                <div className="hamburger-menu">
+                <div className="hamburger-menu" onClick={toggleCollapse}>
                     <div className="line"></div>
                     <div className="line"></div>
                     <div className="line"></div>
@@ -111,8 +99,8 @@ function Sidebar() {
                         <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0" />
                     </svg>
                 </div>
-                <div className="nav-label">You are logged in as Rachid EDDAHBI</div>
-                <button className="nav-btn">Logout</button>
+                <div className="nav-label">You are logged in as {userName}</div>
+                <button className="nav-btn" onClick={handleLogout}>Logout</button>
             </li>
         </ul>
     </nav >

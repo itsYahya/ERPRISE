@@ -1,3 +1,5 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import {
     Button,
     Table,
@@ -11,11 +13,24 @@ import {
 import { FaPlus } from "react-icons/fa6";
 
 export default function Payroll() {
-    const data = [
-        { id: 1, name: "Ahmed Yassin", amount: 1000, release: 600, month: "01-2024" },
-        { id: 2, name: "Sara El Amrani", amount: 950, release: 450, month: "01-2024" },
-        { id: 3, name: "Ali Ben Said", amount: 1100, release: 1100, month: "01-2024" },
-    ];
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchPayroll = async () => {
+            setLoading(true);
+            try {
+                const response = await axios.get('http://localhost:8000/api/payroll/');
+                setData(response.data);
+            } catch (err) {
+                setError('Failed to fetch payroll data');
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchPayroll();
+    }, []);
 
     const getStatus = (amount, release) => {
         if (release >= amount) return <Badge color="success">Paid</Badge>;
@@ -31,9 +46,10 @@ export default function Payroll() {
                     <FaPlus className="h-4 w-4" /> Add Salary Advance
                 </Button>
             </div>
-
             <Card className="rounded-xl shadow">
                 <div className="p-4">
+                    {loading && <div>Loading...</div>}
+                    {error && <div className="text-red-500">{error}</div>}
                     <Table className="min-w-full text-sm text-gray-700">
                         <TableHeader>
                             <TableRow className="bg-gray-50">

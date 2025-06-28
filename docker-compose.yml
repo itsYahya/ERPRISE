@@ -1,39 +1,71 @@
+version: "3.8"
+
 services:
+  frontend:
+    container_name: frontend
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
   backend:
     container_name: backend
-    build: ./backend
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
     ports:
-      - 8000:8000
-    networks:
-      - default-net
+      - "8000:8000"
     volumes:
-      - ./backend/data:/data
+      - ./backend/src:/backend/api
+      - ./backend/media:/backend/media
+      - ./backend/static:/backend/static
     depends_on:
       - database
-        
-  
+      - mongodb
+    env_file:
+      - ./backend/.env
+    environment:
+      - PYTHONUNBUFFERED=1
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=adminpassword
+      - DATABASE_HOST=database
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=mydb
+      - DATABASE_USER=admin
+      - DATABASE_PASSWORD=adminpassword
+      - MONGO_DB=erpdb
+      - MONGO_HOST=mongodb
+      - MONGO_PORT=27017
+
   database:
     container_name: postgres
-    build: ./database
+    image: postgres:17-alpine
     ports:
-      - 5432:5432
+      - "5432:5432"
     volumes:
-      - ./database/data:/data
-      - ./database/postgres_data:/var/lib/postgresql/data
-    env_file:
-      - ./database/conf/.env
-    networks:
-      - default-net
-    command: >
-      postgres
-      -c wal_level=replica
-      -c max_wal_senders=10
-      -c wal_keep_size=64
-      -c archive_mode=on
-    
-networks:
-  default-net:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 192.198.128.0/24
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=adminpassword
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=erpdb
+
+volumes:
+  mongo-data:
+  postgres_data:

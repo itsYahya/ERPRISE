@@ -2,12 +2,21 @@ FROM python:3
 
 WORKDIR /backend
 
+# Install PostgreSQL client
+RUN apt-get update && apt-get install -y postgresql-client
+
+# Copy configuration first
 COPY ./conf/ .
 
-COPY ./src/ api
-
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN chmod +x script.sh
+# Copy application code
+COPY ./src/ api/
 
-CMD [ "./script.sh" ]
+# Make script executable with explicit permissions and line endings
+RUN chmod +x ./script.sh && \
+    sed -i 's/\r$//' ./script.sh
+
+# Run the script
+CMD ["/bin/bash", "./script.sh"]
